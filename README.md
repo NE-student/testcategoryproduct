@@ -9,12 +9,17 @@
 1. Склонируйте репозиторий:
 
    ```bash
-   git clone <URL_вашего_репозитория>
-   cd <имя_папки_репозитория>
+   git clone https://github.com/NE-student/testcategoryproduct.git
+   cd testcategoryproduct
+   ```
 2. Установите зависимости:
+    ``` bash
     npm install
+    ```
 3. Запустите приложение:
+    ``` bash
     npm run dev
+    ```
 4. Откройте браузер и перейдите по адресу http://localhost:3000.
 
 Структура проекта:
