@@ -1,7 +1,8 @@
-'use client';
+'use client'; // Указываем, что это клиентский компонент
 
 import React from 'react';
 import { useCart } from '@/context/CartContext';
+import CartItem from '@/components/Cart/CartItem'; // Импортируем новый компонент
 
 const CartModal: React.FC = () => {
   const { cart, isModalOpen, toggleModal } = useCart();
@@ -10,17 +11,14 @@ const CartModal: React.FC = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full text-black">
+      <div className="bg-white text-black rounded-lg shadow-lg p-6 max-w-md w-full">
         <h2 className="text-lg font-bold mb-4">Ваш кошик</h2>
         {cart.length === 0 ? (
           <p>Кошик пустий</p>
         ) : (
           <ul>
             {cart.map((product) => (
-              <li key={product.id} className="flex justify-between mb-2">
-                <span>{product.title}</span>
-                <span>{product.price} грн</span>
-              </li>
+              <CartItem key={product.id} {...product} /> // Используем новый компонент
             ))}
           </ul>
         )}

@@ -1,11 +1,18 @@
-'use client';
+'use client'; // Указываем, что это клиентский компонент
 
 import React, { createContext, useContext, useState } from 'react';
-import { Product } from '@/types/Product';
+
+interface Product {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+}
 
 interface CartContextType {
   cart: Product[];
   addToCart: (product: Product) => void;
+  removeFromCart: (id: number) => void; // Добавляем функцию для удаления товара
   isModalOpen: boolean;
   toggleModal: () => void;
 }
@@ -21,12 +28,16 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     console.log('Товар добавлен в корзину:', product);
   };
 
+  const removeFromCart = (id: number) => {
+    setCart((prev) => prev.filter(item => item.id !== id)); // Удаляем товар из корзины
+  };
+
   const toggleModal = () => {
     setModalOpen((prev) => !prev);
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, isModalOpen, toggleModal }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, isModalOpen, toggleModal }}>
       {children}
     </CartContext.Provider>
   );

@@ -1,3 +1,5 @@
+import CartButton from '@/components/Cart/CartButton';
+import CartModal from '@/components/Cart/CartModal';
 import Link from 'next/link';
 
 const Home = async () => {
@@ -6,7 +8,11 @@ const Home = async () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Категорії товарів</h1>
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-2xl font-bold">Категорії товарів</h1>
+        <CartButton /> {/* Кнопка "Кошик" теперь справа */}
+      </div>
+      <CartModal />
       <ul className="space-y-2">
         {categories.map((category, index) => (
           <li key={index}>
