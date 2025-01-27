@@ -1,14 +1,8 @@
-'use client'; // Вказуємо, що це клієнтський компонент
+'use client';
 
 import React from 'react';
 import { useCart } from '@/context/CartContext';
-
-interface Product {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-}
+import { Product } from '@/types/Product';
 
 const CartButton: React.FC<Product> = ({ id, title, description, price }) => {
   const { addToCart } = useCart();
