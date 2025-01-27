@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Product Catalog App
 
-## Getting Started
+Это приложение для каталога продуктов, разработанное с использованием Next.js и Tailwind CSS. Пользователи могут просматривать категории товаров, добавлять их в корзину и управлять содержимым корзины.
 
-First, run the development server:
+## Установка
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Чтобы запустить проект локально, выполните следующие шаги:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Склонируйте репозиторий:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   git clone <URL_вашего_репозитория>
+   cd <имя_папки_репозитория>
+2. Установите зависимости:
+    npm install
+3. Запустите приложение:
+    npm run dev
+4. Откройте браузер и перейдите по адресу http://localhost:3000.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Структура проекта:
 
-## Learn More
+- 'src': Корневая папка проекта.
+- 'src/app': Папка для компонентов и страниц.
+- 'src/components': Папка для компонентов.
+- 'src/context': Папка для контекста.
+- 'src/types': Папка для типов.
+- 'public': Папка для статических файлов.
+- 'styles': Папка для стилей.
 
-To learn more about Next.js, take a look at the following resources:
+Использование
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+На главной странице вы можете просматривать категории товаров, добавлять их в корзину и управлять содержимым корзины.
